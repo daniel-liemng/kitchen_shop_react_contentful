@@ -1,0 +1,8 @@
+import React from "react";
+import { FaHome, FaInfoCircle, FaProductHunt } from "react-icons/fa";
+
+export const navbarData = [
+  { id: 1, text: "Home", path: "/", icon: <FaHome /> },
+  { id: 2, text: "About", path: "/about", icon: <FaInfoCircle /> },
+  { id: 3, text: "Products", path: "/products", icon: <FaProductHunt /> },
+];
