@@ -1,12 +1,13 @@
 import React from "react";
 
-import { Hero } from "../../components";
+import { Hero, FeaturedProducts } from "../../components";
 import { HomeWrapper } from "./HomeElements";
 
 const Home = () => {
   return (
     <HomeWrapper>
-      <Hero></Hero>
+      <Hero />
+      <FeaturedProducts />
     </HomeWrapper>
   );
 };
