@@ -11,7 +11,7 @@ const ProductList = ({ products }) => {
     <ProductListWrapper>
       <ProductListContainer>
         {products.map((product) => (
-          <ProductItem key={product.sys.id} product={product} />
+          <ProductItem key={product.id} product={product} />
         ))}
       </ProductListContainer>
     </ProductListWrapper>

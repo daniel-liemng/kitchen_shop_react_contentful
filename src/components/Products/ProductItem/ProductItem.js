@@ -7,10 +7,16 @@ import {
   ProductTitle,
   ProductPrice,
 } from "./ProductItemElements";
+import { useProductsContext } from "../../../context/ProductsContext";
+import Loading from "../../Shared/Loading";
 
 const ProductItem = ({ product }) => {
-  const { id } = product.sys;
+  const { setSingleProduct } = useProductsContext();
+
+  if (!product) return <Loading />;
+
   const {
+    id,
     title,
     price,
     image: {
@@ -18,13 +24,18 @@ const ProductItem = ({ product }) => {
         file: { url: imgPath },
       },
     },
-  } = product.fields;
+  } = product;
 
   return (
     <ProductItemWrapper>
       <ProductImg src={imgPath} alt={title} />
       <ProductContent>
-        <ProductTitle to={`/products/${id}`}>{title}</ProductTitle>
+        <ProductTitle
+          to={`/products/${id}`}
+          onClick={() => setSingleProduct(id)}
+        >
+          {title}
+        </ProductTitle>
         <ProductPrice>$ {price}</ProductPrice>
       </ProductContent>
     </ProductItemWrapper>

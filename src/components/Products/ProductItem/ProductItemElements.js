@@ -9,7 +9,7 @@ export const ProductItemWrapper = styled.article`
 
 export const ProductImg = styled.img`
   width: 100%;
-  height: 300px;
+  height: 250px;
   display: block;
   object-fit: contain;
   border-radius: 5px;
@@ -25,6 +25,7 @@ export const ProductTitle = styled(Link)`
   color: #000;
   text-decoration: none;
   font-weight: 700;
+  letter-spacing: 1px;
   cursor: pointer;
 
   &:hover {

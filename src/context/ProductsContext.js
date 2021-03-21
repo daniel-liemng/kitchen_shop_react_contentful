@@ -6,6 +6,7 @@ import {
   GET_PRODUCTS_BEGIN,
   GET_PRODUCTS_SUCCESS,
   GET_PRODUCTS_ERROR,
+  SET_SINGLE_PRODUCT,
 } from "../actions/actionTypes";
 
 const ProductsContext = createContext();
@@ -13,6 +14,7 @@ const ProductsContext = createContext();
 const initialState = {
   products: [],
   featured_products: [],
+  single_product: {},
   products_loading: false,
   products_error: false,
 };
@@ -29,15 +31,20 @@ const ProductsProvider = ({ children }) => {
       .then((res) =>
         dispatch({ type: GET_PRODUCTS_SUCCESS, payload: res.items })
       )
-      .catch((err) => dispatch({ type: GET_PRODUCTS_ERROR, payload: err }));
+      .catch((err) => dispatch({ type: GET_PRODUCTS_ERROR }));
   };
 
   useEffect(() => {
     fetchProducts();
   }, []);
 
+  // set single product and store in localStorage
+  const setSingleProduct = (id) => {
+    dispatch({ type: SET_SINGLE_PRODUCT, payload: id });
+  };
+
   return (
-    <ProductsContext.Provider value={{ ...state }}>
+    <ProductsContext.Provider value={{ ...state, setSingleProduct }}>
       {children}
     </ProductsContext.Provider>
   );

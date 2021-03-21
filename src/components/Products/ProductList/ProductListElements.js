@@ -12,6 +12,6 @@ export const ProductListContainer = styled.div`
   }
 
   @media screen and (min-width: 1170px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 `;

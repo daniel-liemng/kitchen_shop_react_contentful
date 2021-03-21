@@ -7,6 +7,7 @@ const TitleWrapper = styled.div`
   h1 {
     color: #01bf71;
     font-size: 2rem;
+    letter-spacing: 2px;
   }
 `;
 

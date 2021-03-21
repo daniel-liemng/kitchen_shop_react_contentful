@@ -14,8 +14,6 @@ const FeaturedProducts = () => {
     products_error: error,
   } = useProductsContext();
 
-  console.log(featured_products);
-
   if (loading) {
     return <Loading />;
   }
@@ -27,7 +25,7 @@ const FeaturedProducts = () => {
   return (
     <FeaturedProductsWrapper>
       <Title title='Featured Products' />
-      <ProductList products={featured_products} />
+      <ProductList products={featured_products.slice(0, 4)} />
     </FeaturedProductsWrapper>
   );
 };
