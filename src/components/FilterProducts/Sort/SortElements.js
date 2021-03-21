@@ -51,16 +51,19 @@ export const SearchContainer = styled.div`
   select {
     padding: 0.3rem;
     background: #01bf71;
+    outline: none;
   }
 
   input {
     padding: 0.3rem;
     width: 30%;
+    outline: none;
   }
 `;
 
 export const SortContainer = styled.div`
   select {
     padding: 0.3rem;
+    outline: none;
   }
 `;

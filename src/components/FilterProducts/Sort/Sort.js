@@ -28,8 +28,6 @@ const Sort = () => {
 
   const categories = getUniqueValues(all_products, "category");
 
-  console.log("c", categories);
-
   return (
     <SortWrapper>
       <ViewDisplay>
@@ -41,15 +39,22 @@ const Sort = () => {
             <BsList />
           </Btn>
         </BtnContainer>
-        <p>{products && products.length} products</p>
+        <p>{products && products.length} Products Found</p>
       </ViewDisplay>
       <SearchComponent>
         <SearchContainer>
           <form onSubmit={(e) => e.preventDefault()}>
-            <select name='search' id='search'>
-              <option value='all'>All</option>
-              <option value='blender'>Blender</option>
-              <option value='mixer'>Mixer</option>
+            <select
+              name='category'
+              id='search'
+              value={category}
+              onChange={updateFilters}
+            >
+              {categories.map((cat, index) => (
+                <option key={index} value={cat}>
+                  {cat.substr(0, 1).toUpperCase() + cat.slice(1)}
+                </option>
+              ))}
             </select>
             <input
               type='text'
