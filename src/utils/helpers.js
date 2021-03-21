@@ -3,3 +3,7 @@ export const formatProduct = (product) => {
 
   return { id, ...product.fields };
 };
+
+export const getUniqueValues = (arr, str) => {
+  return ["all", ...new Set(arr.map((item) => item[str]))];
+};

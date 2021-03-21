@@ -11,6 +11,7 @@ import {
   SearchComponent,
 } from "./SortElements";
 import { useFilterContext } from "../../../context/FilterContext";
+import { getUniqueValues } from "../../../utils/helpers";
 
 const Sort = () => {
   const {
@@ -24,6 +25,10 @@ const Sort = () => {
     updateFilters,
     all_products,
   } = useFilterContext();
+
+  const categories = getUniqueValues(all_products, "category");
+
+  console.log("c", categories);
 
   return (
     <SortWrapper>
