@@ -20,6 +20,9 @@ const Sort = () => {
     setListView,
     sort,
     updateSort,
+    filters: { text, category },
+    updateFilters,
+    all_products,
   } = useFilterContext();
 
   return (
@@ -37,13 +40,18 @@ const Sort = () => {
       </ViewDisplay>
       <SearchComponent>
         <SearchContainer>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <select name='search' id='search'>
               <option value='all'>All</option>
               <option value='blender'>Blender</option>
               <option value='mixer'>Mixer</option>
             </select>
-            <input type='text' />
+            <input
+              type='text'
+              name='text'
+              value={text}
+              onChange={updateFilters}
+            />
           </form>
         </SearchContainer>
         <SortContainer>

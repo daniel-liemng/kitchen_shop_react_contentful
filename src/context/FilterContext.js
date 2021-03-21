@@ -8,6 +8,8 @@ import {
   SET_LISTVIEW,
   UPDATE_SORT,
   SORT_PRODUCTS,
+  UPDATE_FILTERS,
+  FILTER_PRODUCTS,
 } from "../actions/actionTypes";
 
 const FilterContext = createContext();
@@ -39,10 +41,11 @@ const FilterProvider = ({ children }) => {
     dispatch({ type: LOAD_PRODUCTS, payload: products });
   }, [products]);
 
-  // Load all products based on sort option
+  // Load all products based on sort options and filter options
   useEffect(() => {
+    dispatch({ type: FILTER_PRODUCTS });
     dispatch({ type: SORT_PRODUCTS });
-  }, [products, state.sort]);
+  }, [products, state.sort, state.filters]);
 
   // Set GridView
   const setGridView = () => {
@@ -61,11 +64,26 @@ const FilterProvider = ({ children }) => {
   };
 
   // Update filter options
-  const updateFilters = (e) => {};
+  const updateFilters = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
+  };
+
+  // Clear filter options
+  const clearFilters = () => {};
 
   return (
     <FilterContext.Provider
-      value={{ ...state, setGridView, setListView, updateSort, updateFilters }}
+      value={{
+        ...state,
+        setGridView,
+        setListView,
+        updateSort,
+        updateFilters,
+        clearFilters,
+      }}
     >
       {children}
     </FilterContext.Provider>
