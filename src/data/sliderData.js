@@ -5,9 +5,19 @@ import ImgFour from "../images/kitchen-4.jpg";
 import ImgFive from "../images/kitchen-5.jpg";
 
 export const sliderData = [
-  { id: 1, title: "Kitchen 1", image: ImgOne, alt: "kitchen1" },
-  { id: 2, title: "Kitchen 2", image: ImgTwo, alt: "kitchen2" },
-  { id: 3, title: "Kitchen 3", image: ImgThree, alt: "kitchen3" },
-  { id: 4, title: "Kitchen 4", image: ImgFour, alt: "kitchen4" },
-  { id: 5, title: "Kitchen 5", image: ImgFive, alt: "kitchen5" },
+  {
+    id: 1,
+    title: "Save up to 70% - Door Crasher Deals",
+    image: ImgOne,
+    alt: "kitchen1",
+  },
+  {
+    id: 2,
+    title: "Get free gift with purchase of $75",
+    image: ImgTwo,
+    alt: "kitchen2",
+  },
+  { id: 3, title: "Buy one get one 50% off", image: ImgThree, alt: "kitchen3" },
+  { id: 4, title: "Check out new flyer", image: ImgFour, alt: "kitchen4" },
+  { id: 5, title: "See what's trending now", image: ImgFive, alt: "kitchen5" },
 ];
