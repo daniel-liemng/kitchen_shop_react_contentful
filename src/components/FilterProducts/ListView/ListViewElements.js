@@ -8,9 +8,14 @@ export const ListViewWrapper = styled.section`
 
 export const ListViewProductItem = styled.article`
   border-radius: 5px;
-  background: grey;
+  background: #b7b7a4;
   display: grid;
   grid-template-columns: 300px 1fr;
+
+  @media screen and (max-width: 576px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ProductImg = styled.img`

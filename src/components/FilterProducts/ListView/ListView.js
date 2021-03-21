@@ -33,7 +33,7 @@ const ListView = ({ products }) => {
               <h2>{title}</h2>
               <p className='price'>$ {price}</p>
               <p className='description'>
-                {description.substr(0, 200) + "..."}
+                {description.substr(0, 150) + "..."}
               </p>
               <Button
                 to={`/products/${id}`}

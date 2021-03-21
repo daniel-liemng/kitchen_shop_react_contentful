@@ -13,7 +13,7 @@ const FilterContext = createContext();
 const initialState = {
   all_products: [],
   filtered_products: [],
-  list_view: true,
+  list_view: false,
 };
 
 const FilterProvider = ({ children }) => {
