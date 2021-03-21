@@ -11,10 +11,15 @@ const filterReducer = (state, action) => {
 
   switch (type) {
     case LOAD_PRODUCTS:
+      //// Inject the Filtter functionality when loading products
+      let maxPrice = payload.map((prod) => prod.price);
+      maxPrice = Math.max(...maxPrice);
+
       return {
         ...state,
         all_products: [...payload],
         filtered_products: [...payload],
+        filters: { ...state.filters, max_price: maxPrice, price: maxPrice },
       };
     case SET_GRIDVIEW:
       return { ...state, list_view: false };
