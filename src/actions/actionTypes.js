@@ -6,4 +6,4 @@ export const GET_PRODUCTS_ERROR = "GET_PRODUCTS_ERROR";
 export const SET_SINGLE_PRODUCT = "SET_SINGLE_PRODUCT";
 
 // Filtering products
-export const SET_SINGLE_PRODUCT1 = "SET_SINGLE_PRODUCT";
+export const LOAD_PRODUCTS = "LOAD_PRODUCTS";

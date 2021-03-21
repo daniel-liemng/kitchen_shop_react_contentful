@@ -1,16 +1,15 @@
-import {
-  GET_PRODUCTS_BEGIN,
-  GET_PRODUCTS_SUCCESS,
-  GET_PRODUCTS_ERROR,
-  SET_SINGLE_PRODUCT,
-} from "../actions/actionTypes";
+import { LOAD_PRODUCTS } from "../actions/actionTypes";
 
 const filterReducer = (state, action) => {
   const { type, payload } = action;
 
   switch (type) {
-    case "abc":
-      return { ...state };
+    case LOAD_PRODUCTS:
+      return {
+        ...state,
+        all_products: [...payload],
+        filtered_products: [...payload],
+      };
     default:
       throw new Error(`No Matching ${type} action type`);
   }
