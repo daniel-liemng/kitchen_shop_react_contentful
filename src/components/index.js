@@ -9,3 +9,8 @@ export { default as Title } from "./Shared/Title";
 
 export { default as Hero } from "./Home/Hero/Hero";
 export { default as FeaturedProducts } from "./Home/FeaturedProducts/FeaturedProducts";
+
+export { default as ProductList } from "./Products/ProductList/ProductList";
+
+export { default as Filters } from "./FilterProducts/Filters/Filters";
+export { default as Sort } from "./FilterProducts/Sort/Sort";

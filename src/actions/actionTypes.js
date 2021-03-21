@@ -7,3 +7,5 @@ export const SET_SINGLE_PRODUCT = "SET_SINGLE_PRODUCT";
 
 // Filtering products
 export const LOAD_PRODUCTS = "LOAD_PRODUCTS";
+export const SET_GRIDVIEW = "SET_GRIDVIEW";
+export const SET_LISTVIEW = "SET_LISTVIEW";
