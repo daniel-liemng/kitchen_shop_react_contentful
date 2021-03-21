@@ -13,6 +13,7 @@ import {
 import { useProductsContext } from "../../context/ProductsContext";
 import Loading from "../../components/Shared/Loading";
 import Star from "../../components/SingleProduct/Star/Star";
+import AddToCart from "../../components/Cart/AddToCart/AddToCart";
 
 const SingleProduct = () => {
   const { single_product } = useProductsContext();
@@ -56,12 +57,7 @@ const SingleProduct = () => {
             <strong>Free shipping</strong>
           </p>
 
-          {stock > 0 && (
-            <div>
-              <hr />
-              <h4>Hi</h4>
-            </div>
-          )}
+          {stock > 0 && <AddToCart product={single_product} />}
         </ProductContent>
       </SingleProductContainer>
     </SingleProductWrapper>
