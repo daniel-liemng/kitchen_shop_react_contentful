@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FiltersWrapper } from "./FitlersElements";
+import { FiltersWrapper, PriceFilter } from "./FitlersElements";
 import { useFilterContext } from "../../../context/FilterContext";
 
 const Filters = () => {
@@ -12,7 +12,21 @@ const Filters = () => {
 
   return (
     <FiltersWrapper>
-      <form onSubmit={(e) => e.preventDefault()}></form>
+      <h4>Advanced Search</h4>
+      <form onSubmit={(e) => e.preventDefault()}>
+        <div className='form-control'>
+          <label htmlFor='price'>Price: ${price}</label>
+          <PriceFilter
+            type='range'
+            id='price'
+            name='price'
+            min={min_price}
+            max={max_price}
+            value={price}
+            onChange={updateFilters}
+          />
+        </div>
+      </form>
     </FiltersWrapper>
   );
 };
