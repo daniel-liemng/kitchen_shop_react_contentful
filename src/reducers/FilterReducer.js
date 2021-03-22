@@ -6,6 +6,7 @@ import {
   UPDATE_SORT,
   UPDATE_FILTERS,
   FILTER_PRODUCTS,
+  CLEAR_FILTERS,
 } from "../actions/actionTypes";
 
 const filterReducer = (state, action) => {
@@ -65,6 +66,18 @@ const filterReducer = (state, action) => {
       return { ...state, filters: { ...state.filters, [name]: value } };
     case FILTER_PRODUCTS:
       return { ...state };
+    case CLEAR_FILTERS:
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          text: "",
+          category: "all",
+          price: state.filters.max_price,
+          shipping: false,
+          storeAvailable: false,
+        },
+      };
     default:
       throw new Error(`No Matching ${type} action type`);
   }

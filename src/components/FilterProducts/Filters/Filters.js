@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FiltersWrapper, PriceFilter } from "./FitlersElements";
+import { FiltersWrapper, PriceFilter, ClearBtn } from "./FitlersElements";
 import { useFilterContext } from "../../../context/FilterContext";
 
 const Filters = () => {
@@ -15,7 +15,8 @@ const Filters = () => {
       <h4>Advanced Search</h4>
       <form onSubmit={(e) => e.preventDefault()}>
         <div className='form-control'>
-          <label htmlFor='price'>Price: ${price}</label>
+          <label htmlFor='price'>Price</label>
+          <p>${price}</p>
           <PriceFilter
             type='range'
             id='price'
@@ -26,7 +27,30 @@ const Filters = () => {
             onChange={updateFilters}
           />
         </div>
+        <div className='form-control-checkbox'>
+          <input
+            type='checkbox'
+            name='shipping'
+            id='shipping'
+            checked={shipping}
+            onChange={updateFilters}
+          />{" "}
+          <label htmlFor='shipping'>Free Shipping</label>
+        </div>
+        <div className='form-control-checkbox'>
+          <input
+            type='checkbox'
+            name='storeAvailable'
+            id='storeAvailable'
+            checked={storeAvailable}
+            onChange={updateFilters}
+          />{" "}
+          <label htmlFor='storeAvailable'>Available in Store</label>
+        </div>
       </form>
+      <ClearBtn type='button' onClick={clearFilters}>
+        Clear Search
+      </ClearBtn>
     </FiltersWrapper>
   );
 };

@@ -10,6 +10,7 @@ import {
   SORT_PRODUCTS,
   UPDATE_FILTERS,
   FILTER_PRODUCTS,
+  CLEAR_FILTERS,
 } from "../actions/actionTypes";
 
 const FilterContext = createContext();
@@ -72,11 +73,17 @@ const FilterProvider = ({ children }) => {
       value = Number(value);
     }
 
+    if (name === "shipping" || name === "storeAvailable") {
+      value = e.target.checked;
+    }
+
     dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
   };
 
   // Clear filter options
-  const clearFilters = () => {};
+  const clearFilters = () => {
+    dispatch({ type: CLEAR_FILTERS });
+  };
 
   return (
     <FilterContext.Provider
