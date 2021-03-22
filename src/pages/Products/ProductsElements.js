@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProductsWrapper = styled.section`
-  margin: 4rem auto;
+  margin: 2rem auto;
 `;
 
 export const ProductsContainer = styled.div`
