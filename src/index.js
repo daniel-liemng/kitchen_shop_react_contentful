@@ -4,11 +4,14 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { ProductsProvider } from "./context/ProductsContext";
 import { FilterProvider } from "./context/FilterContext";
+import { CartProvider } from "./context/CartContext";
 
 ReactDOM.render(
   <ProductsProvider>
     <FilterProvider>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </FilterProvider>
   </ProductsProvider>,
   document.getElementById("root")

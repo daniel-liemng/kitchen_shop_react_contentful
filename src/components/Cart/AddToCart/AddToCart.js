@@ -4,8 +4,11 @@ import { Button } from "../../Shared/Button";
 
 import { AddToCartWrapper } from "./AddToCartElements";
 import AmountButtons from "../AmountButtons/AmountButtons";
+import { useCartContext } from "../../../context/CartContext";
 
 const AddToCart = ({ product }) => {
+  const { addToCart } = useCartContext();
+
   const { id, stock } = product;
 
   // state
@@ -43,7 +46,9 @@ const AddToCart = ({ product }) => {
         increaseAmount={increaseAmount}
         decreaseAmount={decreaseAmount}
       />
-      <Button to='/cart'>Add To Cart</Button>
+      <Button to='/cart' onClick={() => addToCart(id, amount, product)}>
+        Add To Cart
+      </Button>
     </AddToCartWrapper>
   );
 };
