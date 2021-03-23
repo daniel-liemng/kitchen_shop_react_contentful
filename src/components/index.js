@@ -14,3 +14,6 @@ export { default as ProductList } from "./Products/ProductList/ProductList";
 
 export { default as Filters } from "./FilterProducts/Filters/Filters";
 export { default as Sort } from "./FilterProducts/Sort/Sort";
+
+export { default as AddToCart } from "./Cart/AddToCart/AddToCart";
+export { default as CartContent } from "./Cart/CartContent/CartContent";

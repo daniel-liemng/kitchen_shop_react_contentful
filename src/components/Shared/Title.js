@@ -15,9 +15,7 @@ const TitleUnderline = styled.div`
   width: 10rem;
   height: 0.25rem;
   background: #cd853f;
-  margin-top: 0.5rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1rem auto;
 `;
 
 const Title = ({ title }) => {

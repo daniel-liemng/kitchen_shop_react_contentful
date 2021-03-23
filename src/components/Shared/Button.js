@@ -18,6 +18,8 @@ export const Button = styled(Link)`
   background: ${({ primary }) => (primary ? "#000d1a" : "#cd853f")};
   color: ${({ primary }) => (primary ? "#fff" : "#000d1a")};
   font-size: ${({ big }) => (big ? "20px" : "14px")};
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   &:hover {
     transform: translateY(-2px);
