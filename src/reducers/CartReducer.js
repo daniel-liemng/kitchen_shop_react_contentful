@@ -17,8 +17,26 @@ const cartReducer = (state, action) => {
 
       // Item exist in the cart
       if (tempItem) {
+        const tempCart = state.cart.map((cartItem) => {
+          // Update the amount if item to be added is already in the cart
+          // Check the stock when update newAmount -> stock is the maximum
+          if (cartItem.id === id) {
+            let newAmount = cartItem.amount + amount;
+
+            if (newAmount > cartItem.max) {
+              newAmount = cartItem.max;
+            }
+
+            // Return the item with updated amount
+            return { ...cartItem, amount: newAmount };
+          } else {
+            // keep the same item in cart if it is not the item to be added/updated
+            return cartItem;
+          }
+        });
+        return { ...state, cart: tempCart };
       } else {
-        // No item in cart -> add new item
+        // No item in cart -> add new item to cart
         const newItem = {
           id,
           title: product.title,
