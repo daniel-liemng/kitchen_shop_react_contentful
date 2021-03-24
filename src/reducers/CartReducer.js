@@ -45,11 +45,14 @@ const cartReducer = (state, action) => {
           price: product.price,
           max: product.stock,
         };
-
         return { ...state, cart: [...state.cart, newItem] };
       }
+    case REMOVE_CART_ITEM:
+      const tempCart = state.cart.filter((item) => item.id !== payload);
 
-      return { ...state };
+      return { ...state, cart: tempCart };
+    case CLEAR_CART:
+      return { ...state, cart: [] };
     default:
       throw new Error(`No Matching ${type} action type`);
   }
