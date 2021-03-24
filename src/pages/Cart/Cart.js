@@ -22,6 +22,7 @@ const Cart = () => {
 
   return (
     <CartWrapper>
+      <Title title='Your Shopping Cart' />
       <CartContent />
     </CartWrapper>
   );

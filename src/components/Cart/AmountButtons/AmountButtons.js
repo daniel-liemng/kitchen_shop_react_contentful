@@ -7,9 +7,9 @@ import {
   IncreaseIcon,
 } from "./AmountButtonsElements";
 
-const AmountButtons = ({ amount, increaseAmount, decreaseAmount }) => {
+const AmountButtons = ({ amount, increaseAmount, decreaseAmount, small }) => {
   return (
-    <AmountButtonsWrapper>
+    <AmountButtonsWrapper small={small}>
       <IconButton type='button' onClick={decreaseAmount}>
         <DecreaseIcon />
       </IconButton>

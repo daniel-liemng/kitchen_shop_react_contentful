@@ -24,11 +24,7 @@ const SingleProduct = () => {
     id,
     title,
     price,
-    image: {
-      fields: {
-        file: { url: imgPath },
-      },
-    },
+    image,
     description,
     freeShipping,
     stock,
@@ -38,7 +34,7 @@ const SingleProduct = () => {
   return (
     <SingleProductWrapper>
       <SingleProductContainer>
-        <ProductImg src={imgPath} />
+        <ProductImg src={image} />
         <ProductContent>
           <ProductTitle>{title}</ProductTitle>
           <Star rating={rating} />

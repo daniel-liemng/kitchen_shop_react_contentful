@@ -15,20 +15,11 @@ const ProductItem = ({ product }) => {
 
   if (!product) return <Loading />;
 
-  const {
-    id,
-    title,
-    price,
-    image: {
-      fields: {
-        file: { url: imgPath },
-      },
-    },
-  } = product;
+  const { id, title, price, image } = product;
 
   return (
     <ProductItemWrapper>
-      <ProductImg src={imgPath} alt={title} />
+      <ProductImg src={image} alt={title} />
       <ProductContent>
         <ProductTitle
           to={`/products/${id}`}
