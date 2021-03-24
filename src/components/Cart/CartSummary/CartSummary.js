@@ -19,7 +19,7 @@ const CartSummary = () => {
         </p>
         <hr />
         <h4>
-          Order Total <span>${total_amount + shipping_fee}</span>
+          Order Total <span>${(total_amount + shipping_fee).toFixed(2)}</span>
         </h4>
       </div>
 

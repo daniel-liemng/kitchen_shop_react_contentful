@@ -29,8 +29,10 @@ const initialState = {
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // Save the current cart to localStorage
+  // 1. Save the current cart to localStorage
+  // 2. Re-Count the total everytime cart is changed
   useEffect(() => {
+    dispatch({ type: COUNT_CART_TOTALS });
     localStorage.setItem("kitchen-cart", JSON.stringify(state.cart));
   }, [state.cart]);
 

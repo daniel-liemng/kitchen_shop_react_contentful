@@ -14,8 +14,11 @@ import {
 } from "./NavbarElements";
 import { FaBars } from "react-icons/fa";
 import { navbarData } from "../../../data/navbarData";
+import { useCartContext } from "../../../context/CartContext";
 
 const Navbar = ({ toggleSidebar }) => {
+  const { total_items } = useCartContext();
+
   return (
     <NavbarWrapper>
       <NavbarContainer>
@@ -33,7 +36,7 @@ const Navbar = ({ toggleSidebar }) => {
           ))}
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/cart'>Cart</NavBtnLink>
+          <NavBtnLink to='/cart'>Cart - {total_items}</NavBtnLink>
         </NavBtn>
       </NavbarContainer>
     </NavbarWrapper>
