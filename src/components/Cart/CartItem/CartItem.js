@@ -7,9 +7,15 @@ import { useCartContext } from "../../../context/CartContext";
 const CartItem = ({ id, title, price, amount, image }) => {
   const { removeItem, toggleAmount } = useCartContext();
 
-  const increase = () => {};
+  const increase = () => {
+    // Just pass the signal of Increase
+    toggleAmount(id, "increase");
+  };
 
-  const decrease = () => {};
+  const decrease = () => {
+    // Just pass the signal of Decrease
+    toggleAmount(id, "decrease");
+  };
 
   return (
     <CartItemWrapper>
@@ -39,7 +45,7 @@ const CartItem = ({ id, title, price, amount, image }) => {
         small
       />
       <div className='price'>
-        <span>Subtotal:</span>${price * amount}
+        <span>Subtotal:</span>${(price * amount).toFixed(2)}
       </div>
     </CartItemWrapper>
   );

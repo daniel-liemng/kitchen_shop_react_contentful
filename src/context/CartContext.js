@@ -45,7 +45,11 @@ const CartProvider = ({ children }) => {
   };
 
   // Toggle amount
-  const toggleAmount = (id, value) => {};
+  // Value is functionality of Increase or Decrease
+  const toggleAmount = (id, value) => {
+    console.log(id, value);
+    dispatch({ type: TOGGLE_CART_ITEM_AMOUNT, payload: { id, value } });
+  };
 
   // Clear cart
   const clearCart = () => {
