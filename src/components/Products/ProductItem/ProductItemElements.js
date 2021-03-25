@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 export const ProductItemWrapper = styled.article`
   border-radius: 5px;
-  background: #b7b7a4;
+  /* background: #b7b7a4; */
+  background: #e9ecef;
   padding: 1.5rem;
 `;
 

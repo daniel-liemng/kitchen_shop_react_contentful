@@ -12,7 +12,7 @@ const CartSummary = () => {
       <h3>Order Summary</h3>
       <div className='content'>
         <p>
-          Subtotal <span>${total_amount}</span>
+          Subtotal <span>${total_amount.toFixed(2)}</span>
         </p>
         <p>
           Shipping Fee <span>${shipping_fee}</span>

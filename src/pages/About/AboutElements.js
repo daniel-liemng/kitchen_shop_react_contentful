@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutWrapper = styled.section`
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 224px);
   padding: 1rem;
 `;
 
@@ -26,4 +26,6 @@ export const AboutTitle = styled.h1`
 
 export const AboutText = styled.p`
   margin-bottom: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
 `;

@@ -15,20 +15,10 @@ const ListView = ({ products }) => {
   return (
     <ListViewWrapper>
       {products.map((product) => {
-        const {
-          id,
-          title,
-          image: {
-            fields: {
-              file: { url: imgPath },
-            },
-          },
-          price,
-          description,
-        } = product;
+        const { id, title, image, price, description } = product;
         return (
           <ListViewProductItem key={id}>
-            <ProductImg src={imgPath} />
+            <ProductImg src={image} />
             <ProductContent>
               <h2>{title}</h2>
               <p className='price'>$ {price}</p>

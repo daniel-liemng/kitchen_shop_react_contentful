@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 
 export const NavbarWrapper = styled.nav`
   background: #000;
@@ -86,6 +87,10 @@ export const NavLinks = styled(Link)`
   &.active {
     border-bottom: 3px solid #01bf71;
   }
+
+  &:hover {
+    color: #01bf71;
+  }
 `;
 
 export const NavBtn = styled.nav`
@@ -99,7 +104,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(Link)`
   border-radius: 50px;
-  background: #01bf71;
+  /* background: #01bf71; */
   white-space: nowrap;
   padding: 10px 22px;
   color: #010606;
@@ -109,10 +114,37 @@ export const NavBtnLink = styled(Link)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  position: relative;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
+    background: #01bf71;
     color: #010606;
   }
+
+  span {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #cd853f;
+    left: 40px;
+    top: 5px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 1px;
+    font-weight: bold;
+    color: #000;
+  }
 `;
+
+export const CartIcon = styled(FaShoppingCart)`
+  font-size: 1.7rem;
+  color: #fff;
+`;
+
+// export const CartTotal = styled.div`
+//   position: absolute;
+//   width: 10px;
+//   height: 10px;
+//   border-radius: 5px;
+// `;

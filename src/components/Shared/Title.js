@@ -5,7 +5,7 @@ const TitleWrapper = styled.div`
   text-align: center;
 
   h1 {
-    color: #01bf71;
+    color: #000;
     font-size: 2rem;
     letter-spacing: 2px;
   }

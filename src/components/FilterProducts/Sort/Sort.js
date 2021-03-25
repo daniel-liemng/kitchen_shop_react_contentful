@@ -39,7 +39,7 @@ const Sort = () => {
             <BsList />
           </Btn>
         </BtnContainer>
-        <p>{products && products.length} Products Found</p>
+        <p>{products && products.length} Items</p>
       </ViewDisplay>
       <SearchComponent>
         <SearchContainer>

@@ -24,7 +24,7 @@ const FeaturedProducts = () => {
 
   return (
     <FeaturedProductsWrapper>
-      <Title title='Featured Products' />
+      <Title title='Shop Our Featured Products' />
       <ProductList products={featured_products.slice(0, 4)} />
     </FeaturedProductsWrapper>
   );
