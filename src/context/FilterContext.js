@@ -11,6 +11,7 @@ import {
   UPDATE_FILTERS,
   FILTER_PRODUCTS,
   CLEAR_FILTERS,
+  UPDATE_CATEGORY_FILTER,
 } from "../actions/actionTypes";
 
 const FilterContext = createContext();
@@ -85,6 +86,11 @@ const FilterProvider = ({ children }) => {
     dispatch({ type: CLEAR_FILTERS });
   };
 
+  // Filter by category (Homepage)
+  const updateCategoryFilter = (catTerm) => {
+    dispatch({ type: UPDATE_CATEGORY_FILTER, payload: catTerm });
+  };
+
   return (
     <FilterContext.Provider
       value={{
@@ -94,6 +100,7 @@ const FilterProvider = ({ children }) => {
         updateSort,
         updateFilters,
         clearFilters,
+        updateCategoryFilter,
       }}
     >
       {children}

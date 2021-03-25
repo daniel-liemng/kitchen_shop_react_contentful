@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "../../Shared/Button";
 
+import { Button } from "../../Shared/Button";
 import { AddToCartWrapper } from "./AddToCartElements";
 import AmountButtons from "../AmountButtons/AmountButtons";
 import { useCartContext } from "../../../context/CartContext";

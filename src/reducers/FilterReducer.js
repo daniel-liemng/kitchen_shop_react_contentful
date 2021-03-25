@@ -7,6 +7,7 @@ import {
   UPDATE_FILTERS,
   FILTER_PRODUCTS,
   CLEAR_FILTERS,
+  UPDATE_CATEGORY_FILTER,
 } from "../actions/actionTypes";
 
 const filterReducer = (state, action) => {
@@ -111,6 +112,8 @@ const filterReducer = (state, action) => {
           storeAvailable: false,
         },
       };
+    case UPDATE_CATEGORY_FILTER:
+      return { ...state, filters: { ...state.filters, category: payload } };
     default:
       throw new Error(`No Matching ${type} action type`);
   }

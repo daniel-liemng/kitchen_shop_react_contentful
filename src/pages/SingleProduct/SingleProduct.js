@@ -21,7 +21,6 @@ const SingleProduct = () => {
   if (!single_product) return <Loading />;
 
   const {
-    id,
     title,
     price,
     image,

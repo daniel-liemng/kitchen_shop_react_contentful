@@ -12,7 +12,6 @@ import {
   NavBtn,
   NavBtnLink,
   CartIcon,
-  CartTotal,
 } from "./NavbarElements";
 import { FaBars } from "react-icons/fa";
 import { navbarData } from "../../../data/navbarData";

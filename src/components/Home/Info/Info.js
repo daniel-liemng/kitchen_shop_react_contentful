@@ -1,5 +1,4 @@
 import React from "react";
-import Img1 from "../../../images/coffee-maker.jpg";
 
 import {
   InfoWrapper,
