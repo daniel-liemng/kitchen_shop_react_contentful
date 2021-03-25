@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Button = styled(Link)`
   white-space: nowrap;
   min-width: 100px;
-  max-width: 200px;
+  max-width: 250px;
   outline: none;
   border: none;
   text-decoration: none;
@@ -29,7 +29,7 @@ export const Button = styled(Link)`
 export const ClickButton = styled.button`
   white-space: nowrap;
   min-width: 100px;
-  max-width: 200px;
+  max-width: 250px;
   outline: none;
   border: none;
   letter-spacing: 2px;

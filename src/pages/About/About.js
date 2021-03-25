@@ -1,10 +1,12 @@
 import React from "react";
 
-import AboutPhoto from "../../images/kitchen-1.jpg";
+// import AboutPhoto from "../../images/kitchen-1.jpg";
+import AboutFilm from "../../videos/video1.mp4";
 
 import {
   AboutWrapper,
-  AboutImg,
+  // AboutImg,
+  AboutVideo,
   AboutContainer,
   AboutTitle,
   AboutText,
@@ -13,7 +15,10 @@ import {
 const About = () => {
   return (
     <AboutWrapper>
-      <AboutImg src={AboutPhoto}></AboutImg>
+      {/* <AboutImg src={AboutPhoto}></AboutImg> */}
+      <AboutVideo autoPlay loop muted>
+        <source src={AboutFilm} type='video/mp4' />
+      </AboutVideo>
       <AboutContainer>
         <AboutTitle>Our Story</AboutTitle>
         <AboutText>

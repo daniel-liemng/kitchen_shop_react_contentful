@@ -14,22 +14,22 @@ const Home = () => {
       <Info
         title='Make the coffee of your choice'
         text='Leave them on the counter for easy access.'
-        btnLabel='Coffee Maker'
+        btnLabel='Shop Coffee Maker'
         imgPath={Img1}
         linkPath='coffee maker'
       />
       <Info
         imgRight
-        title='Make the coffee of your choice'
+        title='Easy cooking with the cooker'
         text='Leave them on the counter for easy access.'
-        btnLabel='Cooker'
+        btnLabel='Shop Cooker'
         imgPath={Img2}
         linkPath='cooker'
       />
       <Info
         title='Want to make a cake at home'
         text='Leave them on the counter for easy access.'
-        btnLabel='Mixer'
+        btnLabel='Shop Mixer'
         imgPath={Img3}
         linkPath='mixer'
       />

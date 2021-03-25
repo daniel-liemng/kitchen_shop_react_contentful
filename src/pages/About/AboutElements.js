@@ -11,6 +11,13 @@ export const AboutImg = styled.img`
   object-fit: cover;
 `;
 
+export const AboutVideo = styled.video`
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.9);
+`;
+
 export const AboutContainer = styled.div`
   margin-top: 1.5rem;
   display: flex;

@@ -14,6 +14,11 @@ export const ProductImg = styled.img`
   display: block;
   object-fit: contain;
   border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const ProductContent = styled.div`
