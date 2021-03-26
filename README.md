@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Wide Networking
+MERN Stack - Material UI
+Deploy server on Heroku and frontend on Netlify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live website](https://kitchen-shop-react-contentful.netlify.app)
 
-## Available Scripts
+## Table of Contents
+* [About The Project](#about)
 
-In the project directory, you can run:
+* [Tech Stack](#tech-stack)
 
-### `npm start`
+* [Work flow](#work-flow)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* [Getting started](#getting-started)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About The Project
+An e-commerce web app built with ReactJS, React Hooks, Styled Components and fetching data from Contentful CMS. Deployed on Netlify
 
-### `npm test`
+## Tech Stack
+  * ##### ReactJS, React Hooks, useReducer
+  * ##### Styled Components
+  * ##### Contentful CMS
+  
+## Work Flow
+* Landing page is where the customer can see all the features of the website like image slider, shop all products and shop by category
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Image](https://github.com/daniel-liemng/kitchen_shop_react_contentful/blob/master/src/screenshoot/kitchen-1.PNG)
 
-### `npm run build`
+![Image](https://github.com/daniel-liemng/kitchen_shop_react_contentful/blob/master/src/screenshoot/kitchen-2.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* The customers can shop all products with basic search by name and categories, sort and advanced search by price, shipping, availability in store
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Image](https://github.com/daniel-liemng/kitchen_shop_react_contentful/blob/master/src/screenshoot/kitchen-3.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* The customers can view the details of a single product and add to cart
 
-### `npm run eject`
+![Image](https://github.com/daniel-liemng/kitchen_shop_react_contentful/blob/master/src/screenshoot/kitchen-4.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* The customers can view the cart page with the purchase summary
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Image](https://github.com/daniel-liemng/kitchen_shop_react_contentful/blob/master/src/screenshoot/kitchen-5.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Getting started
+**1.** In order to run this app, you need to have `node.js` installed.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**2.** `git clone https://github.com/daniel-liemng/kitchen_shop_react_contentful.git`
 
-## Learn More
+**3.** Install all dependencies and run app
+npm install
+```
+Run app
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm run dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##### Environment variables
 
-### Code Splitting
+Create `.env` file in root folder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+REACT_APP_CONTENTFUL_SPACE_ID=<CONTENTFUL_SPACE_ID>
+REACT_APP_CONTENTFUL_ACCESS_TOKEN=<CONTENTFUL_ACCESS_TOKEN>
+```
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
