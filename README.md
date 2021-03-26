@@ -1,6 +1,7 @@
-# Wide Networking
-MERN Stack - Material UI
-Deploy server on Heroku and frontend on Netlify
+# Kitchen Shop
+UI: ReactJS, Styled Components
+Fetching data: Contentful CMS
+Deploy on Netlify
 
 [Live website](https://kitchen-shop-react-contentful.netlify.app)
 
