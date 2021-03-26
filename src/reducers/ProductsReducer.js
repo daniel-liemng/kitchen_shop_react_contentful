@@ -32,7 +32,7 @@ const productsReducer = (state, action) => {
       const product = state.products.find((product) => product.id === payload);
 
       // store single product in localStorage
-      localStorage.setItem("singleProduct", JSON.stringify(product));
+      localStorage.setItem("kitchen-singleProduct", JSON.stringify(product));
 
       return {
         ...state,
