@@ -29,7 +29,7 @@ An e-commerce web app built with ReactJS, React Hooks, Styled Components and fet
 
 ![Image](https://github.com/daniel-liemng/kitchen_shop_react_contentful/blob/master/src/screenshoot/kitchen-2.png)
 
-* The customers can shop all products with basic search by name and categories, sort and advanced search by price, shipping, availability in store
+* The customers can shop all products with basic search by name and categories, sort and advanced search by price, shipping, availability in store. There are two options of grid and list layout
 
 ![Image](https://github.com/daniel-liemng/kitchen_shop_react_contentful/blob/master/src/screenshoot/kitchen-3.png)
 
@@ -53,7 +53,6 @@ Run app
 
 ```
 npm run dev
-```
 
 ##### Environment variables
 
